@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
 
 </head>
-
 <body>
 	<header>
 		<div class="container">
@@ -23,7 +22,7 @@
 				<!-- Nombre de usuario -->
 				<div
 					class="col-md-12 col-lg logo d-flex align-items-center justify-content-center justify-content-lg-start">
-					<a class="nombre" href="{% url 'portfolio' %}">Carlos Masuchi</a>
+					<a class="nombre" href="{% url 'portfolio' %}">{{ about.name }}</a>
 					<samp class="icono icon-dot"></samp>
 					<p>Diseño Grafico</p>
 				</div>

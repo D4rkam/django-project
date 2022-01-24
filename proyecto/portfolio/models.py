@@ -4,7 +4,7 @@ from django.db import models
 class Project(models.Model): #Con esta clase creamos los campos para agregar nuevos 'POST', y traducimos el menú
     title = models.CharField(max_length=200, verbose_name="Titulo")
     description = models.TextField(verbose_name="Descripcion")
-    image = models.ImageField(verbose_name="Imagen", upload_to="Proyect")
+    image = models.ImageField(verbose_name="Imagen", upload_to="Project")
     link = models.URLField(null=True, blank=True, verbose_name="Direccion Web")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     update = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualización")

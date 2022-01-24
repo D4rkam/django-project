@@ -6,12 +6,13 @@ class Project(models.Model): #Con esta clase creamos los campos para agregar nue
     description = models.TextField(verbose_name="Descripcion")
     image = models.ImageField(verbose_name="Imagen", upload_to="Proyect")
     link = models.URLField(null=True, blank=True, verbose_name="Direccion Web")
-    crated = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
+    created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     update = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualización")
 
     class Meta: #Con esta clase traducimos la seccion de nuestra app 
         verbose_name = "Proyecto"
         verbose_name_plural = "Proyectos"
+        ordering = ("-created",)
 
     def __str__(self): #Esta funcion nos muestra el titulo en la vista previa
         return self.title

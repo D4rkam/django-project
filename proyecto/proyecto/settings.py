@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'portfolio.apps.PortfolioConfig',
     'about.apps.AboutConfig',
+    'contact',
 ]
 
 MIDDLEWARE = [

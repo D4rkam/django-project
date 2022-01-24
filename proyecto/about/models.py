@@ -12,6 +12,7 @@ class About(models.Model):
     class Meta:
         verbose_name = "Acerca De"
         verbose_name_plural = "Acerca De"
+        ordering = ("-created",)
     
     def __str__(self):
         return self.name

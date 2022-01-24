@@ -18,8 +18,8 @@ from django.urls import path, include
 from django.conf import settings
 
 urlpatterns = [
-    #======APP CORE======#
-    path('', include('core.urls')),
+    #======APP CONTACT======#
+    path('', include('contact.urls')),
 
     #======APP PORTFOLIO======#
     path('', include('portfolio.urls')),

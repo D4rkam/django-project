@@ -20,7 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = '#I%!)*;:ms:/J75DsdaA>qjM{9xbRAe8.QJV?sw3;wQ3(f5/U)'
+=======
+SECRET_KEY = '' #Agregar secret key
+>>>>>>> 7aa53a6dd013dc37f354cf930508aa4e74b902c0
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,8 +44,12 @@ INSTALLED_APPS = [
     'core',
     'portfolio.apps.PortfolioConfig',
     'about.apps.AboutConfig',
+<<<<<<< HEAD
     'contact.apps.ContactConfig',
     'ckeditor'
+=======
+    'contact',
+>>>>>>> 7aa53a6dd013dc37f354cf930508aa4e74b902c0
 ]
 
 MIDDLEWARE = [

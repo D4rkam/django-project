@@ -4,14 +4,19 @@
 <html lang="es">
 
 <head>
+	{% load static %}
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 	{% load about_extra %}
 	{% get_about as abouts %}
 	{% for about in abouts %}
 	<title>{{ about.name }}-Portafolio</title>
 	{% endfor %}
 	{% load static %}
+=======
+	<title>Thomas Linares-Portafolio</title>
+>>>>>>> 7aa53a6dd013dc37f354cf930508aa4e74b902c0
 	<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'core/css/fontello.css' %}">
@@ -26,10 +31,14 @@
 				<!-- Nombre de usuario -->
 				<div
 					class="col-md-12 col-lg logo d-flex align-items-center justify-content-center justify-content-lg-start">
+<<<<<<< HEAD
 					{% load about_extra %}
 					{% get_about as abouts%}
 					{% for about in abouts %}
 					<a class="nombre" href="{% url 'portfolio' %}">{{ about.name }}</a>
+=======
+					<a class="nombre" href="{% url 'portfolio' %}">Thomas Linares</a>
+>>>>>>> 7aa53a6dd013dc37f354cf930508aa4e74b902c0
 					<samp class="icono icon-dot"></samp>
 					<p>{{ about.profesion }}</p>
 					{% endfor %}
@@ -77,11 +86,15 @@
 				</div>
 				<div class="col-12 text-center copyright">
 					<samp>
+<<<<<<< HEAD
 						{% load about_extra %}
 						{% get_about as abouts %}
 						{% for about in abouts %}
 						<p>Copyright &copy; 2022 · {{ about.name }} ({{ about.profesion }}) </p>
 						{% endfor %}
+=======
+						<p>Copyright &copy; 2019 · Thomas Linares (Programador Aprendiz) </p>
+>>>>>>> 7aa53a6dd013dc37f354cf930508aa4e74b902c0
 					</samp>
 				</div>
 			</div>

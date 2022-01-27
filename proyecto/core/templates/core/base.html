@@ -6,7 +6,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Carlos Masuchi-Portafolio</title>
+	{% load about_extra %}
+	{% get_about as abouts %}
+	{% for about in abouts %}
+	<title>{{ about.name }}-Portafolio</title>
+	{% endfor %}
 	{% load static %}
 	<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
@@ -22,9 +26,13 @@
 				<!-- Nombre de usuario -->
 				<div
 					class="col-md-12 col-lg logo d-flex align-items-center justify-content-center justify-content-lg-start">
+					{% load about_extra %}
+					{% get_about as abouts%}
+					{% for about in abouts %}
 					<a class="nombre" href="{% url 'portfolio' %}">{{ about.name }}</a>
 					<samp class="icono icon-dot"></samp>
-					<p>Diseño Grafico</p>
+					<p>{{ about.profesion }}</p>
+					{% endfor %}
 				</div>
 				<!-- Menu de navegación -->
 				<nav class="col-md-12 col-lg-auto menu d-flex align-items-stretch flex-wrap flex-sm-nowrap">
@@ -63,13 +71,17 @@
 		<div class="container">
 			<div class="row redes-sociales justify-content-center">
 				<div class="col-auto">
-					<a href="{{ redes.link_facebook }}" class="icono icon-facebook facebook"></a>
-					<a href="{{ redes.link_twitter }}" class="icono icon-twitter twitter"></a>
-					<a href="{{ redes.link_instagram }}" class="icono icon-instagram instagram"></a>
+					<a href="https://github.com/D4rkam" target="_blank" class="icono icon-facebook facebook"></a>
+					<a href="https://github.com/D4rkam" target="_blank" class="icono icon-twitter twitter"></a>
+					<a href="https://github.com/D4rkam" target="_blank" class="icono icon-instagram instagram"></a>
 				</div>
 				<div class="col-12 text-center copyright">
 					<samp>
-						<p>Copyright &copy; 2019 · Carlos Masuchi (Diseñador Grafico) </p>
+						{% load about_extra %}
+						{% get_about as abouts %}
+						{% for about in abouts %}
+						<p>Copyright &copy; 2022 · {{ about.name }} ({{ about.profesion }}) </p>
+						{% endfor %}
 					</samp>
 				</div>
 			</div>

@@ -11,50 +11,55 @@
 {% endblock %}
 
 {% block content %}
+{% for contact in contacts %}
 <main>
 	<!--Acerca de - contenido -->
 	<div class="container">
 		<div class="row contenedor">
 			<div class="col">
-				<h2 class="titulo">Contactar a Carlos Masuchi</h2>
+			{% load about_extra %}
+			{% get_about as abouts %}
+			{% for about in abouts %}
+				<h2 class="titulo">Contactar a {{ about.name }}</h2>
+			{% endfor %}
 				<div class="row contacto justify-content-center align-items-center">
 					<div class="col-12 col-lg-2 col-md-2">
-						<a href="#" class="icono icon-phone phone"></a>
+						<a href="https://github.com/D4rkam" target="_blank" class="icono icon-phone phone"></a>
 					</div>
 					<div class="col-12 col-lg-3 col-md-3">
-						<p class="text-center">+025 456 878</p>
+						<p class="text-center">{{ contact.num_telefono }}</p>
 					</div>
 					<div class="col-12 col-lg-7 col-md-7">
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante </p>
+						<p>{{ contact.descripcion_tel }}</p>
 					</div>
 				</div>
 
 				<div class="row contacto justify-content-center align-items-center">
 					<div class="col-12 col-lg-2 col-md-2">
-						<a href="#" class="icono icon-mail mail"></a>
+						<a href="https://github.com/D4rkam" target="_blank" class="icono icon-mail mail"></a>
 					</div>
 					<div class="col-12 col-lg-3 col-md-3">
-						<p class="text-center">nombre@ejemplo.com</p>
+						<p class="text-center">{{ contact.email }}</p>
 					</div>
 					<div class="col-12 col-lg-7 col-md-7">
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante </p>
+						<p>{{ contact.descripcion_email }}</p>
 					</div>
 				</div>
 
 				<div class="row contacto justify-content-center align-items-center">
 					<div class="col-12 col-lg-2 col-md-2">
-						<a href="#" class="icono icon-whatsapp whatsapp"></a>
+						<a href="https://github.com/D4rkam" target="_blank" class="icono icon-whatsapp whatsapp"></a>
 					</div>
 					<div class="col-12 col-lg-3 col-md-3">
-						<p class="text-center">+051 000 000 000
-						</p>
+						<p class="text-center">{{ contact.num_whatsapp }}</p>
 					</div>
 					<div class="col-12 col-lg-7 col-md-7">
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante </p>
+						<p>{{ contact.descripcion_whatsapp }}</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </main>
+{% endfor %}
 {% endblock %}

@@ -18,14 +18,14 @@ from django.urls import path, include
 from django.conf import settings
 
 urlpatterns = [
-    #======APP CORE======#
-    path('', include('core.urls')),
-
     #======APP PORTFOLIO======#
     path('', include('portfolio.urls')),
 
     #======APP ABOUT======#
-    path('', include('about.urls')),
+    path('about/', include('about.urls')),
+
+    #======APP CONTACT======#
+    path('contact/', include('contact.urls')),
 
     #======ADMIN======#
     path('admin/', admin.site.urls),
